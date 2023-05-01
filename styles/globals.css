@@ -4,10 +4,35 @@
 
 @layer base {
   body {
+    overflow-x: hidden;
     @apply bg-black;
   }
 
   p {
     @apply text-offwhite;
+  }
+
+  h2 {
+    @apply uppercase;
+    @apply text-4xl;
+    @apply lg:text-6xl;
+    @apply font-light;
+  }
+}
+
+@layer components {
+  .with-line {
+    position: relative;
+    padding-left: 120px;
+  }
+  .with-line::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 90px;
+    height: 1px;
+    @apply bg-offwhite;
+    left: 0;
+    bottom: 10px;
   }
 }

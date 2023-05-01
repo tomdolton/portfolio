@@ -10,8 +10,8 @@ export default function Banner() {
     visible: {
       opacity: 1,
       transition: {
-        delay: 1,
-        staggerChildren: 0.1,
+        delayChildren: 0.5,
+        staggerChildren: 0.08,
       },
     },
   };
@@ -26,7 +26,7 @@ export default function Banner() {
 
   return (
     <header
-      className={`grid place-items-center h-screen relative mb-12 overflow-hidden`}
+      className={`grid place-items-center h-screen relative overflow-hidden`}
     >
       <Image
         className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 min-w-[1600px]"

@@ -10,19 +10,16 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["var(--font-saira)", ...fontFamily.sans],
-      },
-
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
-        black: "#292a2e",
+        black: "#1f1f21",
         offwhite: "#F0F0F0",
+        elephant: "#25393e",
+        grey: "#333438",
       },
+    },
+
+    fontFamily: {
+      sans: ["var(--font-saira)", ...fontFamily.sans],
     },
     container: {
       center: true,

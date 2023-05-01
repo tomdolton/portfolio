@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Footer() {
   const pageData = {
     links: [
       { label: "About", url: "#about" },
@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="px-5 py-4 absolute flex items-center w-full z-10">
+    <footer className="py-5 text-white flex items-center px-5">
       <Link href="/">
         <Image src="/images/logo.png" width={64} height={57} alt="Home" />
       </Link>
@@ -24,6 +24,6 @@ export default function Navbar() {
           </Link>
         ))}
       </div>
-    </div>
+    </footer>
   );
 }

@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import Head from "next/head";
 
 import { Saira } from "next/font/google";
 
@@ -8,5 +9,14 @@ const saira = Saira({
 });
 
 export default function App({ Component, pageProps }) {
-  return <Component className={saira.variable} {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <div className={`${saira.variable} font-sans`}>
+        <Component {...pageProps} />;
+      </div>
+    </>
+  );
 }

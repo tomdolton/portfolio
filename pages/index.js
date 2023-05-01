@@ -1,24 +1,29 @@
-import Image from "next/image";
-import { Saira } from "next/font/google";
 import Skills from "@/components/Skills";
 import Banner from "@/components/Banner";
 import Navbar from "@/components/Navbar";
-
-const saira = Saira({ subsets: ["latin"] });
+import About from "@/components/About";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className={`min-h-screen text-white flex-col ${saira.className}`}>
+
+      <main className={`min-h-screen text-white flex-col`}>
         <Banner />
 
-        <div className="container">
-          <h1 className="text-4xl mb-48 pb-48">Portfolio</h1>
-          <div className="py-48 my-48"></div>
-          <Skills />
-        </div>
+        <About />
+
+        <Projects />
+
+        <Skills />
+
+        <Contact />
       </main>
+
+      <Footer />
     </>
   );
 }
